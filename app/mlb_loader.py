@@ -102,8 +102,6 @@ def _num(series):
 
 def _advanced_batting_rows(batting_1998, people) -> list[tuple]:
     """One aggregated row per batter with computed OBP/SLG/OPS/wOBA/wRC+/WAR-est."""
-    import pandas as pd  # noqa: WPS433
-
     if batting_1998.empty:
         return []
 

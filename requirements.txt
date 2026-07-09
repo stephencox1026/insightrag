@@ -15,8 +15,7 @@ rank-bm25>=0.2.2
 psycopg[binary]>=3.1
 pgvector>=0.3
 
-# MLB data ingestion
-pybaseball>=2.2
+# MLB data ingestion (Lahman CSVs in data/cache/ — no pybaseball needed for Cloud)
 pandas>=2.0
 
 # LLM / embeddings

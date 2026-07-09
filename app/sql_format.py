@@ -158,9 +158,9 @@ def verbalize_sql(columns: list[str], rows: list[list]) -> str:
         lines = ["Standings:"]
         for row in rows[:15]:
             team = row[idx_team]
-            w = _fmt_int(row[idx_w])
-            l = _fmt_int(row[idx_l])
-            piece = f"• {team}: {w}-{l}"
+            wins = _fmt_int(row[idx_w])
+            losses = _fmt_int(row[idx_l])
+            piece = f"• {team}: {wins}-{losses}"
             if idx_pct is not None:
                 piece += f" ({_fmt_rate(row[idx_pct], decimals=3)})"
             if idx_gb is not None and str(row[idx_gb]) not in ("", "-", "None"):
