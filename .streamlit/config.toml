@@ -1,10 +1,10 @@
-[server]
-headless = true
-port = 8502
-address = "127.0.0.1"
-enableCORS = false
-enableXsrfProtection = false
+# Local `make ui` can still pass --server.port; do not hardcode a port here —
+# Streamlit Cloud health-checks 8501 and will fail if this file forces 8502.
 
 [browser]
 gatherUsageStats = false
-serverAddress = "localhost"
+
+[server]
+headless = true
+enableCORS = false
+enableXsrfProtection = false
