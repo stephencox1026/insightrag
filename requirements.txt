@@ -1,0 +1,27 @@
+# Core API
+fastapi>=0.110
+uvicorn[standard]>=0.29
+
+# Config & validation
+pydantic>=2.6
+pydantic-settings>=2.2
+python-dotenv>=1.0
+
+# Retrieval
+numpy>=1.26
+rank-bm25>=0.2.2
+
+# Database (Postgres + pgvector when INSIGHTRAG_DATABASE_URL is set)
+psycopg[binary]>=3.1
+pgvector>=0.3
+
+# MLB data ingestion
+pybaseball>=2.2
+pandas>=2.0
+
+# LLM / embeddings
+openai>=1.30
+
+# UI
+streamlit>=1.40
+requests>=2.31

@@ -1,0 +1,214 @@
+[
+  {
+    "question": "What data do you have access to?",
+    "route": "meta",
+    "expected_keywords": ["1998", "player", "team", "game"]
+  },
+  {
+    "question": "What level of data do you have?",
+    "route": "meta",
+    "expected_keywords": ["season", "player", "game"]
+  },
+  {
+    "question": "What can you help me with?",
+    "route": "meta",
+    "expected_keywords": ["batting", "pitching", "standings"]
+  },
+  {
+    "question": "What is batting average (AVG)?",
+    "route": "docs",
+    "expected_source": "mlb_glossary.md",
+    "expected_keywords": ["h / ab"]
+  },
+  {
+    "question": "What is ERA?",
+    "route": "docs",
+    "expected_source": "mlb_glossary.md",
+    "expected_keywords": ["er", "9"]
+  },
+  {
+    "question": "How is OPS calculated?",
+    "route": "docs",
+    "expected_source": "mlb_glossary.md",
+    "expected_keywords": ["obp", "slg"]
+  },
+  {
+    "question": "How many plate appearances are typically needed to qualify for the batting title?",
+    "route": "docs",
+    "expected_source": "rules_faq.md",
+    "expected_keywords": ["502"]
+  },
+  {
+    "question": "Does this dataset include live scores or current-season games?",
+    "route": "docs",
+    "expected_source": "season_1998_overview.md",
+    "expected_keywords": ["does not include", "live"]
+  },
+  {
+    "question": "Give me today's MLB scores.",
+    "route": "docs",
+    "expected_source": "season_1998_overview.md",
+    "expected_keywords": ["does not include", "live"]
+  },
+  {
+    "question": "Who hit the most home runs in 1998?",
+    "route": "sql",
+    "expected_sql_contains": ["from batting", "hr", "order by"],
+    "expected_answer_contains": ["mcgwire", "70"]
+  },
+  {
+    "question": "How many home runs did Sammy Sosa hit in 1998?",
+    "route": "sql",
+    "expected_answer_contains": ["sosa", "66"]
+  },
+  {
+    "question": "How many home runs did Ken Griffey Jr hit?",
+    "route": "sql",
+    "expected_answer_contains": ["griffey", "56"]
+  },
+  {
+    "question": "Who led the league in RBIs in 1998?",
+    "route": "sql",
+    "expected_answer_contains": ["158"]
+  },
+  {
+    "question": "Who stole the most bases in 1998?",
+    "route": "sql",
+    "expected_answer_contains": ["henderson"]
+  },
+  {
+    "question": "Who had the most doubles in 1998?",
+    "route": "sql",
+    "expected_answer_contains": ["biggio"]
+  },
+  {
+    "question": "Give me Juan Gonzalez stats",
+    "route": "sql",
+    "expected_answer_contains": ["gonzalez", "45"]
+  },
+  {
+    "question": "Give me both Alex Rodriguez and Jay Buhner stats",
+    "route": "sql",
+    "expected_answer_contains": ["rodriguez", "buhner"]
+  },
+  {
+    "question": "Compare Mark McGwire and Sammy Sosa",
+    "route": "sql",
+    "expected_answer_contains": ["mcgwire", "sosa"]
+  },
+  {
+    "question": "Who had the highest batting average among qualified hitters?",
+    "route": "sql",
+    "expected_answer_contains": ["walker"]
+  },
+  {
+    "question": "Which qualified hitters batted under .250 in 1998?",
+    "route": "sql",
+    "expected_answer_contains": ["johnson"]
+  },
+  {
+    "question": "Who had the best OPS in 1998?",
+    "route": "sql",
+    "expected_sql_contains": ["fangraphs_batting", "ops"],
+    "expected_answer_contains": ["mcgwire"]
+  },
+  {
+    "question": "Who had the highest on-base percentage in 1998?",
+    "route": "sql",
+    "expected_sql_contains": ["fangraphs_batting"],
+    "expected_answer_contains": ["mcgwire"]
+  },
+  {
+    "question": "Who had the best ERA in 1998 among qualified pitchers?",
+    "route": "sql",
+    "expected_answer_contains": ["maddux"]
+  },
+  {
+    "question": "What was Greg Maddux's ERA in 1998?",
+    "route": "sql",
+    "expected_answer_contains": ["maddux", "2.22"]
+  },
+  {
+    "question": "Who struck out the most batters among pitchers in 1998?",
+    "route": "sql",
+    "expected_sql_contains": ["from pitching", "so"],
+    "expected_answer_contains": ["johnson"]
+  },
+  {
+    "question": "Who had the most wins among pitchers in 1998?",
+    "route": "sql",
+    "expected_sql_contains": ["from pitching"],
+    "expected_answer_contains": ["20"]
+  },
+  {
+    "question": "Who led MLB in WAR in 1998?",
+    "route": "sql",
+    "expected_sql_contains": ["from fangraphs_batting", "war"],
+    "expected_answer_contains": ["mcgwire"]
+  },
+  {
+    "question": "Which team scored the most runs in 1998?",
+    "route": "sql",
+    "expected_sql_contains": ["from teams", "runs_scored"],
+    "expected_answer_contains": ["yankees", "965"]
+  },
+  {
+    "question": "Which team had the worst pitching in 1998?",
+    "route": "sql",
+    "expected_sql_contains": ["runs_allowed"],
+    "expected_answer_contains": ["white sox"]
+  },
+  {
+    "question": "Which team had the most wins in 1998?",
+    "route": "sql",
+    "expected_sql_contains": ["from teams", "wins"],
+    "expected_answer_contains": ["yankees", "114"]
+  },
+  {
+    "question": "What was the Yankees' record in 1998?",
+    "route": "sql",
+    "expected_sql_contains": ["from teams", "wins", "losses"],
+    "expected_answer_contains": ["114"]
+  },
+  {
+    "question": "Show me the AL East standings.",
+    "route": "sql",
+    "expected_sql_contains": ["standings"],
+    "expected_answer_contains": ["yankees"]
+  },
+  {
+    "question": "Who were the highest paid players in 1998?",
+    "route": "sql",
+    "expected_sql_contains": ["salaries"],
+    "expected_answer_contains": ["$"]
+  },
+  {
+    "question": "Who won the AL MVP in 1998?",
+    "route": "sql",
+    "expected_sql_contains": ["awards"],
+    "expected_answer_contains": ["valuable"]
+  },
+  {
+    "question": "Who led the American League in home runs?",
+    "route": "sql",
+    "expected_answer_contains": ["griffey"]
+  },
+  {
+    "question": "What was the Atlanta Braves' longest winning streak in 1998?",
+    "route": "sql",
+    "expected_sql_contains": ["game_logs"],
+    "expected_answer_contains": ["braves"]
+  },
+  {
+    "question": "What is WAR and who led MLB in WAR in 1998?",
+    "route": "hybrid",
+    "expected_keywords": ["replacement", "war"],
+    "expected_answer_contains": ["mcgwire"]
+  },
+  {
+    "question": "What is OPS and who had the highest OPS in 1998?",
+    "route": "hybrid",
+    "expected_keywords": ["obp", "slg"],
+    "expected_answer_contains": ["mcgwire"]
+  }
+]
